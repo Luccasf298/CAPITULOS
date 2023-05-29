@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Pagamento</title>
+  <script>
+    function calcularPagamento() {
+      var preco = parseFloat(document.getElementById('preco').value);
+      var valorAVista = preco * 0.9;
+      var valorParcelado = preco / 3;
+      document.getElementById('valorAVista').innerHTML = "À vista: R$ " + valorAVista.toFixed(2);
+      document.getElementById('valorParcelado').innerHTML = "Ou 3x de R$ " + valorParcelado.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <h1>Calculadora de Pagamento</h1>
+
+  <label for="preco">Digite o preço do produto:</label>
+  <input type="text" id="preco" placeholder="Digite o preço">
+
+  <button onclick="calcularPagamento()">Calcular</button>
+
+  <h2>Opções de pagamento:</h2>
+  <p id="valorAVista"></p>
+  <p id="valorParcelado"></p>
+</body>
+</html>
